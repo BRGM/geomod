@@ -1,0 +1,793 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.brgm.geomod_ont#"
+     xml:base="http://www.brgm.geomod_ont"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.brgm.geomod_ont"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000058">
+        <rdfs:comment>BFO concretized by</rdfs:comment>
+        <rdfs:label>concretized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000196 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000196">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+        <rdfs:comment>BFO bearer of relation (has quality)</rdfs:comment>
+        <rdfs:label>bearer of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197">
+        <rdfs:comment>BFO inherers in</rdfs:comment>
+        <rdfs:label>inheres in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/boundaryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/boundaryOf">
+        <owl:inverseOf rdf:resource="http://www.brgm.geomod_ont/hasBoundary"/>
+        <rdfs:comment>inverse relation of has boundary</rdfs:comment>
+        <rdfs:label>boundary of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/coveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/coveredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.brgm.geomod_ont/hasBoundary"/>
+        <rdfs:comment>Covered by Is a relation related-to between a BFO: Object and a Polarized Boundary.  It specifies that the Object is in contact with the Old-Face of the Polarized Boundary.  </rdfs:comment>
+        <rdfs:label>covered By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/hasBoundary -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/hasBoundary">
+        <rdfs:comment>a relation that relates a geological object to its geological boundary</rdfs:comment>
+        <rdfs:label>has boundary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/hasChronoBottom -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/hasChronoBottom">
+        <owl:inverseOf rdf:resource="http://www.brgm.geomod_ont/chronoBottomOf%20"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/hasChronoTop -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/hasChronoTop">
+        <owl:inverseOf rdf:resource="http://www.brgm.geomod_ont/chronoTopOf%20"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/hasDisposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/hasDisposition">
+        <rdfs:comment>a relation between a continuant and the dispostion it disposes, e,g,, a geological unit has diposition to retain fluids</rdfs:comment>
+        <rdfs:label>has disposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/hasPart">
+        <rdfs:comment>a parthood relation to  designates mereological sums by rlating entities to their parts (modified after BFO)</rdfs:comment>
+        <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/laysOver -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/laysOver">
+        <rdfs:subPropertyOf rdf:resource="http://www.brgm.geomod_ont/hasBoundary"/>
+        <rdfs:comment>Lays over Is a relation related-to between a BFO: Object and a Polarized Boundary.  It specifies that the Object is in contact with the Young-Face of the Polarized Boundary.   </rdfs:comment>
+        <rdfs:label>lays over</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/outerBoundaryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/outerBoundaryOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.brgm.geomod_ont/boundaryOf"/>
+        <rdfs:comment>a specific relation to relate a Magmatic Intrusive Geobody or Geological block to its boundary</rdfs:comment>
+        <rdfs:label>outer boundary of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/plays -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/plays">
+        <rdfs:comment>relation between a continuant and the role it plays, e,g,, a part of a geological unit or a block can plays the role of a reservoir when it has the disposition for fluid retention, fluid transmission and it does contains the fluid  </rdfs:comment>
+        <rdfs:label>plays</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/spatiallyRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/spatiallyRelatedTo">
+        <rdfs:comment>an relation to indicates that a geological object, geological structure, or a geological boundary is related to one of these entities through a spatial relation (Allen&apos;s relations)</rdfs:comment>
+        <rdfs:label>spatially related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/chronoBottomOf%20 -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/chronoBottomOf%20">
+        <rdfs:subPropertyOf rdf:resource="http://www.brgm.geomod_ont/boundaryOf"/>
+        <rdfs:comment>ChronoBottom of is a relation related-to between a Horizon and a Stratigraphic Unit.  It specifies that the Horizon is the manifestations of the beginning of the deposition process that created the unit. </rdfs:comment>
+        <rdfs:label>chrono Bottom Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/chronoTopOf%20 -->
+
+    <owl:ObjectProperty rdf:about="http://www.brgm.geomod_ont/chronoTopOf%20">
+        <rdfs:subPropertyOf rdf:resource="http://www.brgm.geomod_ont/boundaryOf"/>
+        <rdfs:comment>ChronoTop of Is a relation related-to between a Horizon and a Stratigraphic Unit.  It specifies that the Horizon is the manifestations of the endof the deposition process that created the unit. </rdfs:comment>
+        <rdfs:label>chrono Top Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/BFO_0000101 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/BFO_0000101">
+        <rdfs:comment>GeoCore carrier of</rdfs:comment>
+        <rdfs:label>carrier of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000013 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000013">
+        <rdfs:comment>GeoCore generated by</rdfs:comment>
+        <rdfs:label>generated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000015 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000015">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+        <owl:inverseOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000016"/>
+        <rdfs:comment>GeoCore definition : The relation between a Geological Object and its Geological Age.</rdfs:comment>
+        <rdfs:label>has age</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000016 -->
+
+    <owl:ObjectProperty rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000016">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+        <rdfs:comment>GeoCore definition : The relation between a Geological Age and a Geological Object.</rdfs:comment>
+        <rdfs:label>age of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO spatial region</rdfs:comment>
+        <rdfs:label>spatial region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO process</rdfs:comment>
+        <rdfs:label>process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO disposition</rdfs:comment>
+        <rdfs:label>disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO quality</rdfs:comment>
+        <rdfs:label>quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO role</rdfs:comment>
+        <rdfs:label>role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment>BFO fiat object part</rdfs:comment>
+        <rdfs:label>fiat object part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment>BFO  object</rdfs:comment>
+        <rdfs:label>object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO material Entity</rdfs:comment>
+        <rdfs:label>material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>BFO continuant fiat boundary</rdfs:comment>
+        <rdfs:label>continuant fiat boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000145">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>relational quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/BoundaryBoundaryRelation -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/BoundaryBoundaryRelation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <rdfs:comment>Boundary/Boundary Relation is a BFO: Relational Quality that depends on two Geological Boundaries. It describes the space and/or time relations between these boundaries.     </rdfs:comment>
+        <rdfs:label>boundary boundary relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/BoundaryBoundarySpaceRelation -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/BoundaryBoundarySpaceRelation">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/BoundaryBoundaryRelation"/>
+        <rdfs:comment>Boundary/Boundary Space Relation is a Boundary/Boundary Relation which describes the space relation between two Stratigraphic Boundaries.    </rdfs:comment>
+        <rdfs:label>boundary boundary space relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/BoundaryBoundaryTimeRelation -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/BoundaryBoundaryTimeRelation">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/BoundaryBoundaryRelation"/>
+        <rdfs:comment>Boundary/Boundary Time Relation is a Boundary/Boundary Relation which describes the time relation (older / younger / co-eval with) between two Stratigraphic Boundaries.  </rdfs:comment>
+        <rdfs:label>boundary boundary time relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/CurrentTimeGeologicalObject -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/CurrentTimeGeologicalObject">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <rdfs:comment> BFO: Fiat Object Part attached to the Geological Object Earth Crust or to, some portion of it. It occupies a Region of Interest and characterizes at any Geological Time (current time), the global geology in the Region of Interest, i.e. the geological entities present and their relations. An instance of Current Time Global Geology is the result of the succession of processes that operated in the Region of Interest before the instant at which the instance is defined.    </rdfs:comment>
+        <rdfs:label>current time geological object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/DepostionalStratigraphicUnit -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/DepostionalStratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalUnit"/>
+        <rdfs:comment>Depositional Stratigraphic Unit is a Geological Unit. generated by a depositional process during a definite Geological Time Interval. </rdfs:comment>
+        <rdfs:label>depostional stratigraphic unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/ErosionSurface -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/ErosionSurface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/StratigraphicSurface"/>
+        <rdfs:comment>Erosion Surface is a Stratigraphic Surface which signals the final stage of an erosion process that destroyed some earth material In an older Geological Occurrence.   An Erosion Surface is covered by one or several younger Stratigraphic Units.  </rdfs:comment>
+        <rdfs:label>erosion surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/FluidCompartement -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/FluidCompartement">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <rdfs:comment>Fluid Compartment is a BFO: fiat Object part corresponding to a Reservoir portion containing one specific Earth Fluid (Water Oil, Gas or a mixture of those).</rdfs:comment>
+        <rdfs:label>fluid compartement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/FluidInterface -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/FluidInterface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalBoundary"/>
+        <rdfs:comment>Fluid Interface is a BFO: 2D Continuant Fiat Boundary attached to a reservoir. It corresponds to a horizontal surface separating two Fluid Compartments. </rdfs:comment>
+        <rdfs:label>fluid interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/FluidRetention -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/FluidRetention">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:comment>A disposition that inheres in a geological unit or some of its parts, realized when the unit or some of its parts have sufficient porosity and capillary forces to store Earth Fluids within its pore spaces</rdfs:comment>
+        <rdfs:label>fluid retention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/FluidTransmission -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/FluidTransmission">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:comment>A disposition that inheres in a geological unit or some of its parts, realized when the unit or some of its parts possess sufficient permeability and connected pore networks to facilitate the movement of Earth Fluids through the rock matrix or fractures.</rdfs:comment>
+        <rdfs:label>fluid transmission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/Fold -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/Fold">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment>Fold is GeoCore Geological Structure which is the result of the bending or curving of a stack of originally planar surfaces like sedimentary surfaces  during permanent deformation.</rdfs:comment>
+        <rdfs:label>fold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalBlock -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalBlock">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000001"/>
+        <rdfs:comment> Geological Block is a GeoCore: Geological Object which results from the partition of a geological unit by a later geological process which may be an erosion or a faulting  or thrusting process.</rdfs:comment>
+        <rdfs:label>geological block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalBlockBoundary -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalBlockBoundary">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalBoundary"/>
+        <rdfs:comment>Geological Block Boundary is a BFO: 2D Continuant Fiat Boundary which corresponds to the outer surface of a Geological Block. It consists in several portions, which are each coplanar with a specific Geological Boundary   </rdfs:comment>
+        <rdfs:label>geological block boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalBoundary -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalBoundary">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <rdfs:comment> GeoCore updated definition: Geological Boundary is a BFO: 2D Continuant Fiat Boundary attached and intrinsically related to a Geological Object. A Geological Boundary materializes the Time Instant at which some Geological Process began or ceased operating   </rdfs:comment>
+        <rdfs:label>geological boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalBoundaryAge -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalBoundaryAge">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000003"/>
+        <rdfs:comment>Geological Boundary Age is a Quality of- inhering in Geological Boundary.  It is related to the Time instant that this Geological Boundary materializes. </rdfs:comment>
+        <rdfs:label>geological boundary age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalObjectAge -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalObjectAge">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000003"/>
+        <rdfs:comment>GeoCore Definition :Geological Object Age is a Quality inhering in Geological Object. It is related to the Geological Time Interval during which the process that generated this Geological Object operated. </rdfs:comment>
+        <rdfs:label>geological object age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalUnit -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalUnit">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000001"/>
+        <rdfs:comment>Geological Unit is a GeoCore: Geological Object defined at mapping scale, which is the result of a rock generative process: sediment deposition, magmatic intrusion or of metamorphism.</rdfs:comment>
+        <rdfs:label>geological unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/GeologicalUnitPart -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/GeologicalUnitPart">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <rdfs:comment>Geological Unit Part is GeoCore Geological Object corresponding to a portion of Geological Unit having some particular Quality (for instance a sandstone lens inside a shale layer).  </rdfs:comment>
+        <rdfs:label>geological unit part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/InterestRegion -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/InterestRegion">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:comment>Region of Interest is a BFO: Spatial Region. It designates the region which is object of the modeling  </rdfs:comment>
+        <rdfs:label>interest region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/MagmaticIntrusiveGeobody -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/MagmaticIntrusiveGeobody">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalUnit"/>
+        <rdfs:comment>Magmatic Intrusive Geobody is a Geological Unit which results of a magma intrusion process. A granite batholith, magmatic sills or dykes are examples of Magmatic Intrusive Geobody.</rdfs:comment>
+        <rdfs:label>magmatic intrusive geobody</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/MagmaticIntrusiveOuterSurface -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/MagmaticIntrusiveOuterSurface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalBoundary"/>
+        <rdfs:comment>Magmatic Intrusive Outer Surface is a Geological Boundary which corresponds to the outer envelope of a Magmatic Intrusive Unit. A  Magmatic Intrusive Outer Surface is younger than the Geological Occurrence that it intrudes. .   </rdfs:comment>
+        <rdfs:label>magmatic intrusive outer surface </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/PetrophysicalProperty -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/PetrophysicalProperty">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment>Petrophysical Property is a BFO Specifically Dependent Continuant inhering in GeoCore: Rock. It refers to some rock physical property like Color or Porosity (BFO: Quality) or Permeability (BFO: Disposition).</rdfs:comment>
+        <rdfs:label>petrophysical property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/Polarity -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/Polarity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment>Polarity is a Quality inhering in Geological Boundary. It specifies which side of the boundary is its Young-Face and which is its Old-Face </rdfs:comment>
+        <rdfs:label>polarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/Reservoir -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/Reservoir">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>A BFO: Role that is Role of BFO: Fiat Object Part of Geological object, or of BFO: Geological Ojbect. A reservoir is constituted by porous rocks in which fluids can circulate and be trapped and it contains an Earth Fluid that migrated from a source rock.</rdfs:comment>
+        <rdfs:label>reservoir</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/ReservoirOrganization -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/ReservoirOrganization">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment>Reservoir Organization is a BFO: Generically Dependent Continuant, depending on a Reservoir. It specifies the spatial organization of the Fluid Compartments of the Reservoir. </rdfs:comment>
+        <rdfs:label>reservoir organization </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/Stratification -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/Stratification">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment>Stratification is a Unit Internal Structure, which describes the shapes and arrangement of layers in a depositional unit. </rdfs:comment>
+        <rdfs:label>stratification </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/StratigraphicHorizon -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/StratigraphicHorizon">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/StratigraphicSurface"/>
+        <rdfs:comment>Stratigraphic Horizon is a Stratigraphic Surface which is attached to one or to two Stratigraphic Units by relations that designate it as their ChronoBottom or as their ChronoTop ( i.e. as the manifestations of the beginning or the end  of the deposition process that created the unit)</rdfs:comment>
+        <rdfs:label>stratigraphic horizon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/StratigraphicOrganization -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/StratigraphicOrganization">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment> Stratigraphic Organization is a BFO: Generically Dependent Continuant depending on a Geological Occurrence. It describes the Unit/Unit Relations between the Depostional Stratigraphic Units of the geo-model. A Stratigraphic Organization is usually represented as a Stratigraphic Column.   It is concretized in the various Unit/Unit Relations of the geo-model.   </rdfs:comment>
+        <rdfs:label>stratigraphic organization </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/StratigraphicRank -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/StratigraphicRank">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment>Stratigraphic Rank is a  BFO Quality inhering in Depositional  Stratigraphic Unit, which indicates the rank of this unit in the Stratigraphic Column that represents the geo-model Stratigraphic Organization.    </rdfs:comment>
+        <rdfs:label>stratigraphic rank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/StratigraphicSurface -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/StratigraphicSurface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalBoundary"/>
+        <rdfs:comment>Stratigraphic Surface is a Geological Boundary that bounds somehow one or several Stratigraphic Units.</rdfs:comment>
+        <rdfs:label>stratigraphic surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/StructuralOrganization -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/StructuralOrganization">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment>Structural Organization is a BFO: Generically Dependent Continuant depending on a Geological Occurrence.  It describes the space/time relations between the Stratigraphic Boundaries of the geo-model.  It is concretized in the various Boundary/Boundary relations of the geo-model.</rdfs:comment>
+        <rdfs:label>structural organization </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/TectonicBoundary -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/TectonicBoundary">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/GeologicalBoundary"/>
+        <rdfs:comment>Tectonic Boundary is a Geological Boundary defined at mapping scale, which designates a matter discontinuity in some Geological Occurrence. A Tectonic Boundary is the result of a tectonic process (faulting or thrusting)</rdfs:comment>
+        <rdfs:label>tectonic boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/ThrustSurface -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/ThrustSurface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/TectonicBoundary"/>
+        <rdfs:comment>Thrust Surface is a Tectonic Boundary resulting from a thrusting process  </rdfs:comment>
+        <rdfs:label>thrust surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/TopographicSurface -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/TopographicSurface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/StratigraphicSurface"/>
+        <rdfs:comment>A Geological Boundary that represents the present-day land surface, resulting from erosional stratigraphic processes, but distinct from other erosion surfaces in that it has no overlying stratigraphic units, being directly in contact with the atmosphere</rdfs:comment>
+        <rdfs:label>topographic surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/UnitInternalStructure -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/UnitInternalStructure">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment>Unit Internal Structure is a GeoCore:  Geological Structure inhering in Depositional Stratigraphic Unit. Examples of Unit Internal Structures are sequential arrangement or cross- stratification in a sedimentary unit, grain sorting in a sedimentary layer, flood basalt columnar structure </rdfs:comment>
+        <rdfs:label>unit internal structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/UnitUnitRelation -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/UnitUnitRelation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <rdfs:comment>Unit/Unit Relation is a BFO: Relational Quality that depends on two Depositional Stratigraphic Units. It describes the space and/or time relations between these units.     </rdfs:comment>
+        <rdfs:label>unit unit relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/UnitUnitSpaceRelation -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/UnitUnitSpaceRelation">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/UnitUnitRelation"/>
+        <rdfs:comment>Unit/Unit Space Relation is a UniIt/Unit Relation which describes the space relation between two Depositional Stratigraphic Units.    </rdfs:comment>
+        <rdfs:label>unit unit space relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.brgm.geomod_ont/UnitUnitTimeRelation -->
+
+    <owl:Class rdf:about="http://www.brgm.geomod_ont/UnitUnitTimeRelation">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/UnitUnitRelation"/>
+        <rdfs:comment>Unit/Unit Time Relation is a Unit/Unit Relation which describes the time relation between two Depostional  Stratigraphic Units. The instances of this class are the Allen relations.   </rdfs:comment>
+        <rdfs:label>unit unit time relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geofault.com/FaultStructure -->
+
+    <owl:Class rdf:about="http://www.geofault.com/FaultStructure">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004"/>
+        <rdfs:comment>GeoFault Definition: Fault Structure a GeoCore: Geological Structure that is structure of some Fault Volume. It is a pattern that describes the mutual positions and orientations of the Faut Walls and the Fault Surface. </rdfs:comment>
+        <rdfs:label>fault structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geofault.com/FaultSurface -->
+
+    <owl:Class rdf:about="http://www.geofault.com/FaultSurface">
+        <rdfs:subClassOf rdf:resource="http://www.brgm.geomod_ont/TectonicBoundary"/>
+        <rdfs:comment>GeoFault Fault definition: Surface is a Tectonic Boundary resulting from a faulting process. Fault Surface is related to a GeoFault: Fault Volume  </rdfs:comment>
+        <rdfs:label>fault surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000001 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:comment> GeoCore definition: Geological Object is a rigid entity that provides its own identity criteria and holds a unity criterion. A Geological Object is generated by at least one Geological Process.</rdfs:comment>
+        <rdfs:label>geological object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000002 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment>GeoCore Geological Process </rdfs:comment>
+        <rdfs:label>geological process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000003 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment>GeoCore Geological Age</rdfs:comment>
+        <rdfs:label>geological age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000004">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Geocre Geological Structure</rdfs:comment>
+        <rdfs:label>geological structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000006 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000006">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>earth material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000008 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000008">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000006"/>
+        <rdfs:comment>GeoCore definition Rock is a solid consolidate Earth Material, made of polycrystalline, monocrystalline or amorphous mineral matter or material of biological origin. </rdfs:comment>
+        <rdfs:label>rock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000009 -->
+
+    <owl:Class rdf:about="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000009">
+        <rdfs:subClassOf rdf:resource="https://www.inf.ufrgs.br/bdi/ontologies/GEOCORE_0000006"/>
+        <rdfs:comment>GeoCore Definition:  Earth Fluid is an Earth Material that represents a volume of fluid. Earth Fluids can be Water, Oil, Gas or a mixture of those. Example: petroleum oil and gas.</rdfs:comment>
+        <rdfs:label>earth fluid </rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
